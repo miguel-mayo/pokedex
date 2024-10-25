@@ -1,0 +1,73 @@
+name: pokedex
+description: "Todos tus pokemones en un solo lugar"
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  bloc: null
+  cached_network_image: ^3.4.1
+  dynamic_color: ^1.7.0
+  desktop_window: ^0.4.0
+  flutter_bloc: ^8.1.2
+  flutter_launcher_icons: ^0.13.1
+  flutter_localizations:
+    sdk: flutter
+  freezed_annotation: ^2.0.3
+  flutter:
+    sdk: flutter
+  flutter_native_splash: ^2.2.19
+  go_router: ^14.1.4
+  google_fonts: ^6.1.0
+  http: ^1.1.0
+  intl:
+  lottie: ^3.1.3
+  package_info_plus:
+  share_plus: ^10.0.2
+  shared_preferences:
+  universal_platform: ^1.1.0
+  url_launcher: ^6.2.2
+
+dev_dependencies:
+  bloc_test: ^9.1.1
+  build_runner: ^2.1.5
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  freezed: ^2.2.0
+  json_serializable: ^6.1.2
+  mocktail: ^1.0.0
+
+flutter_native_splash:
+  color: "#CC0000"
+  image: assets/icon/icon.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: "AppIcon"
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/icon/
+    - assets/json/
+    - assets/fonts/
+  
+  fonts:
+    - family: Essentiarum
+      fonts:
+        - asset: assets/fonts/Essentiarum.ttf
+
+scripts:
+  splash: fvm flutter pub run flutter_native_splash:create
+  icons: fvm flutter pub run flutter_launcher_icons
+
+  runner: "dart  run build_runner build --delete-conflicting-outputs"
+  runner-watch: "dart  run build_runner watch"

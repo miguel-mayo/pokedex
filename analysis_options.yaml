@@ -1,0 +1,11 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "lib/shared/my_street_book_icons.dart"
+    - "lib/assets/**/*"
+    - "icons/**/*"
+linter:
+  rules:
+    public_member_api_docs: false
